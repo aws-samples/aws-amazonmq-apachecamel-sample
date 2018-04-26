@@ -24,8 +24,6 @@ import org.apache.camel.builder.RouteBuilder;
  * A Camel Java8 DSL Router
  */
 public class MyRouteBuilder extends RouteBuilder {
-    private String secretKey = System.getenv("AWS_SECRET_ACCESS_KEY");
-    private String accessKey = System.getenv("AWS_ACCESS_KEY");
 
     public void configure() {
         from("amqp:filequeue")
